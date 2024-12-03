@@ -1,3 +1,7 @@
+before '/finstagram_posts/new' do
+  redirect to('/login') unless logged_in?
+end
+
 <h2>New Post</h2>
 <form action="/finstagram_posts" method="POST">
     <div class="form-group">
